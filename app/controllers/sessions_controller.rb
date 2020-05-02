@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	include CurrentserConcern
+	include CurrentUserConcern
 
 	def create
 		user = User
@@ -19,5 +19,10 @@ class SessionsController < ApplicationController
 		else
 			render json: {logged_in: false}
 		end
+	end
+
+	def logout
+		reset_session
+		render json: {status: 200}
 	end
 end
