@@ -8,6 +8,7 @@ export default class extends Component{
 	}
 
 	handleSuccessfulAuth(data) {
+		this.props.handleLogin(data);
 		this.props.history.push('/dashboard');
 	}
 	render() {
