@@ -16,7 +16,7 @@ export default class App extends Component {
 	handleLogin(data) {
 		this.setState({
 			loggedInStatus: "Logged In",
-			user: data
+			user: data.user
 		})
 	}
 	render() {
